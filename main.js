@@ -1,28 +1,38 @@
-// Jiashan Wu
-// https://github.com/OhJia/p5MobileWebExamples
-// revised Daniel Shiffman
+let video;
 
-var x, y, z;
-
-function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
-    x = 0;
-    y = 0;
-    z = 0;
+function setup(){
+    createCanvas(windowWidth,windowHeight,WEBGL)
+    video = createCapture(VIDEO)
 }
 
-function draw() {
-    background(0)
+function draw(){
+    
+    let mx = mouseX -width / 2;
+    let my = mouseY - height / 2
+    
+    background(10)
+    
+    // stroke(255)
+    noStroke();
+    directionalLight(255,255,255 , 0 , frameCount*0.05 , 0)
+    
+    // directionalLight(255,255,255 , 0 , 0 , 200)
+    
+    // translate(mx,my)
+    
+    // rotateX(frameCount * 0.01)
+    // rotateY(frameCount * 0.001)
+    specularMaterial(255);
+    
+    // torus(i, 10);
+    rotateY(mouseY * 0.02);
+    rotateX(mouseX * 0.02);
+    
+        
+        torus(60 , 10)
 
-    // rotate the box based on accelerometer data
-    // we could use rotationX,Y here but demonstrating
-    // acceleration
-    x += accelerationX * 0.05;
-    y += accelerationY * 0.05;
-    z += accelerationZ * 0.05;
-    normalMaterial();
-
-    translate(accelerationX, accelerationY, accelerationZ);
-    box(200, 200, 200);
-
+    specularMaterial(0,255,255);
+    rotateX(frameCount * 0.05)
+    rotateY(frameCount * 0.1)
+    box(50 , 50 , 50);
 }
