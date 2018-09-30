@@ -13,7 +13,6 @@ function setup() {
 
 function draw() {
     background(255, 255, 255, 255);
-    translate(-width / 2, 0, -600);
 
     // rotate the box based on accelerometer data
     // we could use rotationX,Y here but demonstrating
@@ -25,6 +24,8 @@ function draw() {
     rotateX(x);
     rotateY(y);
     rotateZ(z);
+
+    translate(x , y , z);
     box(200, 200, 200);
 
 }
