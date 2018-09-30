@@ -1,7 +1,7 @@
 let song;
 
 function preload() {
-    song = loadSound("../../audio/song.mp3")
+    song = loadSound("../audio/song.mp3")
 }
 
 function setup() {
