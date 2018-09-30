@@ -1,8 +1,10 @@
 let video;
 
 function setup(){
-    createCanvas(windowWidth,windowHeight,WEBGL)
+    createCanvas(500,500,WEBGL)
     video = createCapture(VIDEO)
+    video.size(200,200)
+    video.elt.setAttribute('playsinline', '');
 }
 
 function draw(){
