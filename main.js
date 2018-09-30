@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-    background(255, 255, 255, 255);
+    background(0)
 
     // rotate the box based on accelerometer data
     // we could use rotationX,Y here but demonstrating
@@ -22,7 +22,7 @@ function draw() {
     z += accelerationZ * 0.05;
     normalMaterial();
 
-    translate(accelerationX, accelerationYy, accelerationZ);
+    translate(accelerationX, accelerationY, accelerationZ);
     box(200, 200, 200);
 
 }
