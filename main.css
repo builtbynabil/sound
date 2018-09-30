@@ -1,11 +1,17 @@
 body{
-    background: blue;
+    background: #007bff;
+    font-family: 'Karla',
+    sans-serif;
 }
 
+h1{
+    font-weight: 700;
+}
 
 .block{
     background: white;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.521);
 }
