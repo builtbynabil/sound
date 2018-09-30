@@ -17,8 +17,8 @@ function draw(){
     
     // translate(mx,my)
 
-    rotateX(frameCount * 0.01)
-    rotateY(frameCount * 0.001)
+    rotateX(accelerationX * 0.01)
+    rotateY(accelerationY * 0.001)
 
     specularMaterial(255);
     torus(100 , 20);
