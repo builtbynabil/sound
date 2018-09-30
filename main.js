@@ -21,9 +21,6 @@ function draw() {
     y += accelerationY * 0.05;
     z += accelerationZ * 0.05;
     normalMaterial();
-    rotateX(x);
-    rotateY(y);
-    rotateZ(z);
 
     translate(x , y , z);
     box(200, 200, 200);
