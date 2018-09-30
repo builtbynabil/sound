@@ -1,7 +1,7 @@
 let song;
 
 function preload() {
-    song = loadSound("https://raw.githubusercontent.com/builtbynabil/webgl/master/audio/song.mp3")
+    song = loadSound("./song.mp3")
 }
 
 function setup() {
