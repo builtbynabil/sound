@@ -1,7 +1,7 @@
 let canvas;
 
 function preload() {
-    song = loadSound("./song.mp3")
+    song = loadSound("../audio/song.mp3")
 
 }
 
