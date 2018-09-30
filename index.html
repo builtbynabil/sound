@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="root">
+
+        <div class="block">
+            <h1>This website is currently under construction</h1>
+            <h1>builtbynabil</h1>
+        </div>
+
+        <div v-for="project in projects">
+
+            <div class="block">
+                <h1>{{project["title"]}}</h1>
+                <p>{{project["desc"]}}</p>
+                <p><a :href="project['link']">View It Here</a></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script>
+        let projects = [{
+                "title": "audiovis",
+                "desc": "3d audio visualization",
+                "link": "/audiovis/index.html"
+            },
+            {
+                "title": "webgl",
+                "desc": "3d audio visualization",
+                "link": "/webgl/index.html"
+            },
+        ]
+
+        var app = new Vue({
+            el: ".root",
+            data: {
+                projects: projects
+            }
+        })
+    </script>
+
+</body>
+
+</html>
