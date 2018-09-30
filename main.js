@@ -1,10 +1,11 @@
 let video;
 
 function setup() {
-    createCanvas(500, 500, WEBGL)
+    createCanvas(windowWidth, windowHeight, WEBGL)
     video = createCapture(VIDEO)
     video.size(200, 200)
     video.elt.setAttribute('playsinline', '');
+    video.hide()
 }
 
 function draw() {
@@ -12,11 +13,11 @@ function draw() {
     let mx = mouseX - width / 2;
     let my = mouseY - height / 2
 
-    background(255)
+    background(0)
 
     // stroke(255)
     noStroke();
-    directionalLight(255, 255, 255, 0, 200, 0)
+    // directionalLight(255, 255, 255, 0, 200, 0)
 
     // directionalLight(255,255,255 , 0 , 0 , 200)
 
@@ -25,16 +26,11 @@ function draw() {
     // rotateX(frameCount * 0.01)
     // rotateY(frameCount * 0.001)
     specularMaterial(255);
-
-    // torus(i, 10);
-    rotateY(mouseY * 0.02);
-    rotateX(mouseX * 0.02);
-
-
-    torus(60, 10)
-
+    
     specularMaterial(0, 255, 255);
-    rotateX(frameCount * 0.05)
-    rotateY(frameCount * 0.1)
-    box(50, 50, 50);
+    texture(video)
+    rotateX(frameCount * 0.001)
+    rotateY(frameCount * 0.05)
+    rotateZ(frameCount * 0.05)
+    box(200,200,200);
 }
