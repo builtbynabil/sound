@@ -3,9 +3,27 @@ function setup(){
 }
 
 function draw(){
+
+    let mx = mouseX -width / 2;
+    let my = mouseY - height / 2
+    
     background(0)
-    translate(mouseX - width/2 , mouseY - height/2)
+
+    // stroke(255)
+    noStroke();
+    directionalLight(255,255,255 , mx , my , 0)
+
+    // directionalLight(255,255,255 , 0 , 0 , 200)
+    
+    // translate(mx,my)
+
     rotateX(frameCount * 0.01)
-    rotateY(frameCount * 0.05)
-    box(50 , 50 , 200);
+    rotateY(frameCount * 0.001)
+
+    specularMaterial(255);
+    torus(100 , 20);
+
+    fill(255)
+    translate(mx,my)
+    cone(20 , 30);
 }
