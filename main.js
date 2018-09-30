@@ -22,7 +22,7 @@ function draw() {
     z += accelerationZ * 0.05;
     normalMaterial();
 
-    translate(x , y , z);
+    translate(accelerationX, accelerationYy, accelerationZ);
     box(200, 200, 200);
 
 }
